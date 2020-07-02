@@ -1,0 +1,36 @@
+.div-content-verify-token {
+  width: 100vw;
+  height: 100vh;
+  background: #ffe600;
+}
+
+.div-content-verify-token {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-verify-token-img {
+  margin-bottom: 5rem;
+}
+
+.div-verify-token-title-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-verify-token-title-btn h2,
+h4 {
+  margin-bottom: 50px;
+}
+
+.div-verify-token-title-btn h2 {
+  font-size: 36px;
+}
+
+.div-verify-token-title-btn h4 {
+  font-size: 20px;
+  width: 500px;
+  text-align: center;
+}

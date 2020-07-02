@@ -1,0 +1,145 @@
+.dashboard-main {
+  overflow-x: hidden;
+}
+
+.div-header-yellow {
+  width: 100vw;
+  height: 40vh;
+  background: #ffe600;
+}
+
+.logo-ml-dashboard {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.div-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-dashboard-user {
+  padding: 2rem;
+}
+
+.div-photo-user {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #f2f2f2;
+}
+
+.div-photo-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.image-user {
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+}
+
+.div-content-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -150px;
+}
+
+.div-card-info {
+  background: #f2f2f2;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.div-header-card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.div-card-money {
+  text-align: center;
+}
+
+.div-card-money h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  color: #283380;
+}
+
+.arrow-up-circle-icon {
+  font-size: 30px;
+  color: #039e00;
+}
+
+.div-list-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.div-title-card-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 600px;
+}
+
+.div-card-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div-card-list table {
+  width: 100%;
+  border-spacing: 0 10px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.div-card-list th {
+  color: #111;
+  font-weight: 600;
+  padding: 20px 32px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.div-card-list td {
+  padding: 20px 32px;
+  border: 0;
+  background: #dbdbdb;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c6e72;
+}
+
+.image-product {
+  width: 30px;
+}
+
+.div-card-list td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.div-card-list td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.check-success {
+  font-size: 20px;
+  color: #039e00;
+  margin-left: 10px;
+}
