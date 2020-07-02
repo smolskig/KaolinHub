@@ -17,9 +17,7 @@ export default function Login() {
           </div>
         </div>
         <div className="div-image-svg">
-          <div>
             <img src={imageSvg} alt="LoginSvg" />
-          </div>
         </div>
       </div>
     </>
