@@ -4,7 +4,7 @@ import ButtonBlue from "../../components/ButtonBlue";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-export default function LoginCard() {
+export default function LoginCard(props) {
   return (
     <div className="div-login-card">
       <div className="div-title-card-login">
@@ -21,7 +21,7 @@ export default function LoginCard() {
         <ButtonBlue title="entrar" />
       </div>
       <div className="div-go-create-account">
-        <Link className="link-go-create-account" to="/register">
+        <Link className="link-go-create-account" onClick={props.clickedLink}>
           Criar nova conta
           <FiArrowRight />
         </Link>

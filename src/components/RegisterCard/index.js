@@ -4,7 +4,7 @@ import ButtonBlue from "../../components/ButtonBlue";
 import { FiArrowLeft } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-export default function RegisterCard() {
+export default function RegisterCard(props) {
   return (
     <div className="div-register-card">
       <div className="div-title-card-register">
@@ -26,7 +26,7 @@ export default function RegisterCard() {
         <ButtonBlue title="Criar conta" />
       </div>
       <div className="div-go-create-account">
-        <Link className="link-go-create-account" to="/">
+        <Link className="link-go-create-account" onClick={props.clickedLink}>
           <FiArrowLeft />
           Já tenho conta
         </Link>

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import VerifyToken from "./pages/VerifyToken";
 import Dashboard from "./pages/Dashboard";
 
@@ -11,7 +10,6 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Login} />
-        <Route path="/register" component={Register} />
         <Route path="/verify-token" component={VerifyToken} />
         <Route path="/dashboard" component={Dashboard} />
       </Switch>
