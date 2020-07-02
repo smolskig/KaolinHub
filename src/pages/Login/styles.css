@@ -1,7 +1,6 @@
 .div-content-login-register {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   overflow: hidden;
   height: 100%;
 }
@@ -21,10 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height:50%;
+  width:50%;
 }
 
 .div-image-svg img {
-  height: 800px;
+  height: 30vw;
 }
 
 .logo-ml {
