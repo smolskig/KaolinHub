@@ -8,7 +8,7 @@ export default function VerifyToken() {
     <>
       <div className="div-content-verify-token">
         <div className="div-verify-token-img">
-          <img src={logo} alt="Logo Mercado Entrega" />
+          <img src={logo} alt="LogoMercadoEntrega" />
         </div>
         <div className="div-verify-token-title-btn">
           <h2>Bem vindo Roger !</h2>

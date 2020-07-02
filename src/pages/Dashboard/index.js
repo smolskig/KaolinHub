@@ -19,12 +19,12 @@ export default function Dashboard() {
               <img
                 className="logo-ml-dashboard"
                 src={logo}
-                alt="Logo Mercado Entregue"
+                alt="LogoMercadoEntrega"
               />
             </div>
             <div className="div-dashboard-user">
               <div className="div-photo-user">
-                <img className="image-user" src={imageUser} alt="Image User" />
+                <img className="image-user" src={imageUser} alt="ImageUser" />
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Dashboard() {
                     <img
                       className="image-product"
                       src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="Image Product"
+                      alt="ImageProduct"
                     />
                   </td>
                   <td className="table-title">LG K50S Dual SIM 32 GB</td>
@@ -81,7 +81,7 @@ export default function Dashboard() {
                     <img
                       className="image-product"
                       src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="Image Product"
+                      alt="ImageProduct"
                     />
                   </td>
                   <td className="table-title">LG K50S Dual SIM 32 GB</td>
@@ -97,7 +97,7 @@ export default function Dashboard() {
                     <img
                       className="image-product"
                       src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="Image Product"
+                      alt="ImageProduct"
                     />
                   </td>
                   <td className="table-title">LG K50S Dual SIM 32 GB</td>

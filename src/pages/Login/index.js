@@ -2,7 +2,6 @@ import React from "react";
 import imageSvg from "../../assets/login-svg.svg";
 import logo from "../../assets/logo-ml.png";
 import LoginCard from "../../components/Login";
-import RegisterCard from "../../components/Register";
 import "./styles.css";
 
 export default function Login() {
@@ -11,7 +10,7 @@ export default function Login() {
       <div className="div-content-login">
         <div className="div-background-yellow">
           <div>
-            <img className="logo-ml" src={logo} alt="Logo Mercado Livre" />
+            <img className="logo-ml" src={logo} alt="LogoMercadoEntrega" />
           </div>
           <div>
             <LoginCard />
@@ -19,7 +18,7 @@ export default function Login() {
         </div>
         <div className="div-image-svg">
           <div>
-            <img src={imageSvg} alt="Image Login Svg" />
+            <img src={imageSvg} alt="LoginSvg" />
           </div>
         </div>
       </div>
