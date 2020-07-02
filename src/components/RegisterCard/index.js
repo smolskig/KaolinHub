@@ -13,8 +13,14 @@ export default function RegisterCard(props) {
       <div className="div-input">
         <input className="input" type="text" placeholder="Nome completo" />
         <input className="input" type="text" placeholder="CPF" />
+      </div>
+      <div className="div-input">
         <input className="input" type="text" placeholder="Email" />
         <input className="input" type="text" placeholder="Senha" />
+      </div>
+      <div className="div-input">
+        <input className="input" type="text" placeholder="Confirmar Senha" />
+        <input className="input" type="text" placeholder="Confirmar Senha" />
       </div>
       <div className="div-btn-terms">
         <h4>
