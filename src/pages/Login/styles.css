@@ -25,7 +25,8 @@
 }
 
 .div-image-svg img {
-  height: 30vw;
+  height: 50vw;
+  max-height:800px;
 }
 
 .logo-ml {
