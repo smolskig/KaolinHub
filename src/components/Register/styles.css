@@ -1,0 +1,43 @@
+.div-register-card {
+  width: 500px;
+  height: 700px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.div-register-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.div-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-input input {
+  margin-bottom: 20px;
+}
+
+.div-title-card-register {
+  color: #2d3277;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.div-btn-terms h4 {
+  color: #999797;
+  font-size: 10px;
+  text-align: justify;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.div-btn-terms h4 b {
+  color: #0066ff;
+}
