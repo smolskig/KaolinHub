@@ -11,16 +11,45 @@ export default function RegisterCard(props) {
         <h2>Crie sua conta já!</h2>
       </div>
       <div className="div-input">
-        <input className="input" type="text" placeholder="Nome completo" />
-        <input className="input" type="text" placeholder="CPF" />
+        <input
+          className="input row-input"
+          type="text"
+          placeholder="Nome completo"
+        />
+        <input className="input row-input" type="text" placeholder="Email" />
       </div>
       <div className="div-input">
-        <input className="input" type="text" placeholder="Email" />
-        <input className="input" type="text" placeholder="Senha" />
+        <input className="input row-input" type="text" placeholder="CPF" />
+        <input
+          className="input row-input-area-code"
+          type="text"
+          placeholder="DDD"
+        />
+        <input
+          className="input row-input-phone"
+          type="text"
+          placeholder="Celular"
+        />
       </div>
       <div className="div-input">
-        <input className="input" type="text" placeholder="Confirmar Senha" />
-        <input className="input" type="text" placeholder="Confirmar Senha" />
+        <input className="input row-input" type="text" placeholder="CEP" />
+        <input
+          className="input row-input"
+          type="text"
+          placeholder="Logradouro"
+        />
+      </div>
+      <div className="div-input">
+        <input className="input row-input" type="text" placeholder="Número" />
+        <input className="input row-input" type="text" placeholder="Bairro" />
+      </div>
+      <div className="div-input">
+        <input className="input row-input" type="text" placeholder="Cidade" />
+        <input
+          className="input row-input"
+          type="text"
+          placeholder="Complemento"
+        />
       </div>
       <div className="div-btn-terms">
         <h4>

@@ -13,13 +13,13 @@
   flex-direction: column;
 }
 
-.div-input {
+.div-input-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.div-input input {
+.div-input-login input {
   margin-bottom: 20px;
 }
 

@@ -10,7 +10,7 @@ export default function LoginCard(props) {
       <div className="div-title-card-login">
         <h2>Faça seu logon</h2>
       </div>
-      <div className="div-input">
+      <div className="div-input-login">
         <input className="input" type="text" placeholder="Email" />
         <input className="input" type="text" placeholder="Senha" />
         <a className="link-forgot-password" href="https://google.com">
