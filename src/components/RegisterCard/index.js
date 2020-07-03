@@ -2,7 +2,6 @@ import React from "react";
 import "./styles.css";
 import ButtonBlue from "../../components/ButtonBlue";
 import { FiArrowLeft } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 export default function RegisterCard(props) {
   return (
@@ -61,10 +60,10 @@ export default function RegisterCard(props) {
         <ButtonBlue title="Criar conta" />
       </div>
       <div className="div-go-create-account">
-        <Link className="link-go-create-account" onClick={props.clickedLink}>
+        <span className="link-go-create-account" onClick={props.clickedLink}>
           <FiArrowLeft />
           Já tenho conta
-        </Link>
+        </span>
       </div>
     </div>
   );
