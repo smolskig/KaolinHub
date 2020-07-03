@@ -3,11 +3,17 @@ import {
   FiChevronDown,
   FiChevronUp,
   FiCheckCircle,
+  FiSearch,
 } from "react-icons/fi";
 import "./styles.css";
 import logo from "../../assets/logo-ml.png";
 import imageUser from "../../assets/profile.jpg";
+<<<<<<< HEAD
 import ButtonBlue from "../../components/ButtonBlue"
+=======
+import ButtonBlue from "../../components/ButtonBlue";
+import StatusDelivery from "../../components/StatusDelivery";
+>>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
 
 export default function Dashboard() {
   return (
@@ -32,6 +38,7 @@ export default function Dashboard() {
         <div className="div-content-card">
           <div className="div-card-info">
             <div className="div-header-card-info">
+<<<<<<< HEAD
               <h2>Verificação de Produtos</h2>
               <h3>Produtos Adicionados</h3>
             </div>
@@ -48,8 +55,38 @@ export default function Dashboard() {
               </div>
               <div>
                 <ButtonBlue title="Chamar entregador"></ButtonBlue>
+=======
+              <h2>Verificação de Saída</h2>
+              <h3>Produtos adicionados:</h3>
+            </div>
+            <div className="div-card-product">
+              <div className="card-product">
+                <h4>
+                  Psp 3000 Original Playstation Na Caixa S/ Bateria Otimo Estado
+                </h4>
+                <h4>1x</h4>
               </div>
             </div>
+            <div className="div-card-info-success">
+              <div className="info-product">
+                <h4>Total de produtos: 3</h4>
+                <h4>Peso total: 300gr </h4>
+              </div>
+              <div className="div-btn-confirm-driver">
+                <ButtonBlue title="Chamar o entregador" />
+>>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="div-input-search">
+          <input
+            type="text"
+            className="input"
+            placeholder="Pesquisar produtos"
+          />
+          <div className="div-icon-search">
+            <FiSearch className="icon-search" />
           </div>
         </div>
         <div className="div-list-products">
@@ -154,6 +191,7 @@ export default function Dashboard() {
                   </tr>
               </tbody>
             </table>
+            <StatusDelivery />
           </div>
         </div>
       </div>
