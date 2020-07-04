@@ -2,20 +2,21 @@ import React, {useEffect} from "react";
 import ButtonBlue from "../../components/ButtonBlue";
 import logo from "../../assets/logo-ml.png";
 import {useHistory} from 'react-router-dom'
+import api from "../../services/api"
 import "./styles.css";
 
 
 export default function VerifyToken() {
   const history = useHistory()
-  let userData = JSON.parse(localStorage.getItem('userData'))
   let urlParams = new URLSearchParams(window.location.search);
-
+  let userData = JSON.parse(localStorage.getItem('userData'))
   useEffect(()=>{
     if(urlParams.get('code')){
       userData.mlLogged = true
-      userData.mlToken = urlParams.get('code')
       localStorage.setItem('userData',JSON.stringify(userData))
-      history.push('/dashboard')
+      api.post('ml/code', { code:urlParams.get('code') })
+        .then( history.push('/dashboard') )
+        .catch(err => console.log(err))
     }
   })
   

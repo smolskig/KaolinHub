@@ -16,10 +16,13 @@ import StatusDelivery from "../../components/StatusDelivery";
 
 
 
+
 export default function Dashboard() {
   const history = useHistory()
   useEffect(() => {
-    if(!JSON.parse(localStorage.getItem('userData')).mlLogged){
+    let userData = JSON.parse(localStorage.getItem('userData'))
+    console.log('entrou no if n era pra ter entrado',userData)
+    if(userData.mlLogged === false){
       history.push('/verify-token')
     }
   })
