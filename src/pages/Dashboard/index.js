@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useHistory} from "react-router-dom"
+
 import {
   FiChevronDown,
   FiChevronUp,
@@ -11,7 +13,15 @@ import imageUser from "../../assets/profile.jpg";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
 
+
+
+
 export default function Dashboard() {
+  const history = useHistory()
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem('userData'))
+    return userData.mlLogged ? true : history.push('/verify-token')
+  })
   return (
     <>
       <div className="dashboard-main">

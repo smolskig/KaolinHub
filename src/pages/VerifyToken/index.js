@@ -11,7 +11,7 @@ export default function VerifyToken() {
           <img src={logo} alt="LogoMercadoEntrega" />
         </div>
         <div className="div-verify-token-title-btn">
-          <h2>Bem vindo Roger !</h2>
+          <h2>Bem vindo {JSON.parse(localStorage.getItem('userData')).name} !</h2>
           <h4>
             Para continuar, precisamos da sua autorização no mercado livre.
           </h4>
