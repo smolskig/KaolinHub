@@ -34,7 +34,6 @@ export default function LoginCard(props) {
         } else {
           return history.push("/dashboardDriver");
         }
-        setSpinner(false);
       })
       .catch((err) => {
         notify(err.response.data.message);
