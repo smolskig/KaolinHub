@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import "./styles.css";
-// import logo from "../../assets/logo-ml.png";
-// import imageUser from "../../assets/profile.jpg";
+import logo from "../../assets/logo-ml.png";
+import imageUser from "../../assets/profile.jpg";
 
 export default function DashboardDriver() {
   const [customClass, setCustomClass] = useState("sideNav");
@@ -17,8 +17,14 @@ export default function DashboardDriver() {
             }}
           ></FiMenu>
         </div>
-        <div className="logo menu-item">Logo</div>
-        <div className="profile menu-item">Profile</div>
+        <div className="logo menu-item">
+          <img src={logo} alt="Logo" className="logo-ml-navbar" />
+        </div>
+        <div className="profile menu-item">
+          <div className="div-photo-user">
+            <img className="image-user" src={imageUser} alt="ImageUser" />
+          </div>
+        </div>
       </div>
 
       <div className={customClass}>
@@ -31,7 +37,9 @@ export default function DashboardDriver() {
           >
             <FiX />
           </span>
-          <div className="profile-photo"></div>
+          <div className="profile-photo">
+            <img className="image-profile" src={imageUser} alt="ImageProfile" />
+          </div>
         </div>
         <div className="content-area">
           <ul>

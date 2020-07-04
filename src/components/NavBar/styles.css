@@ -26,8 +26,13 @@
   margin: 20px;
 }
 
+.logo-ml-navbar {
+  width: 150px;
+}
+
 .icon-menu {
   font-size: 35px;
+  cursor: pointer;
 }
 
 .close-button {
@@ -35,6 +40,27 @@
   font-size: 30px;
   right: 20px;
   top: 20px;
+  cursor: pointer;
+}
+
+.div-photo-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #f2f2f2;
+}
+
+.div-photo-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.image-user {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
 }
 .profile-area {
   height: 30%;
@@ -43,6 +69,10 @@
 .profile-photo {
   height: 150px;
   width: 150px;
+}
+
+.image-profile {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  background: #c9c9c9;
 }
