@@ -7,7 +7,6 @@ import Dashboard from "./pages/Dashboard";
 import DashboardDriver from "./pages/DashboardDriver";
 
 export default function Routes() {
-
   const isAuthenticated = () => (
     localStorage.getItem('token') ? true : false
   )

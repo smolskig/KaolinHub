@@ -19,8 +19,9 @@ import StatusDelivery from "../../components/StatusDelivery";
 export default function Dashboard() {
   const history = useHistory()
   useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem('userData'))
-    return userData.mlLogged ? true : history.push('/verify-token')
+    if(!JSON.parse(localStorage.getItem('userData')).mlLogged){
+      history.push('/verify-token')
+    }
   })
   return (
     <>
