@@ -100,171 +100,175 @@ export default function RegisterCard(props) {
   }
 
   return (
-    <div className="div-register-card">
-      <ToastContainer />
-      <div className="div-title-card-register">
-        <h2>Crie sua conta já!</h2>
-      </div>
-      <div className="div-input">
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Nome completo"
-          onChange={(e) => {
-            setFormData({ ...formData, name: e.target.value });
-          }}
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Email"
-          onChange={(e) => {
-            setFormData({ ...formData, email: e.target.value });
-          }}
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="CPF"
-          onChange={(e) => {
-            setFormData({ ...formData, document: e.target.value });
-          }}
-        />
-      </div>
-      <div className="div-input">
-        <input
-          className="input row-input-area-code"
-          type="text"
-          placeholder="DDD"
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.phone.areaCode]: e.target.value,
-            });
-          }}
-        />
-        <input
-          className="input row-input-phone"
-          type="text"
-          placeholder="Celular"
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="CEP"
-          onBlur={handleGetCep}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              address: {
-                ...formData.address,
-                zipCode: e.target.value,
-              },
-            });
-          }}
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Logradouro"
-          value={formData.address.street}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.address.street]: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div className="div-input">
-        <input className="input row-input" type="text" placeholder="Número" />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Bairro"
-          // value={formData.address.district}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.address.district]: e.target.value,
-            });
-          }}
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Cidade"
-          // value={formData.address.city}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.address.city]: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div className="div-input">
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Estado"
-          // value={[formData.address.state]}
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.address.state]: e.target.value,
-            });
-          }}
-        />
-        <input
-          className="input row-input"
-          type="text"
-          placeholder="Complemento"
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.address.complement]: e.target.value,
-            });
-          }}
-        />
-        {/* <select
-          name="type"
-          className="input row-input"
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              [formData.type]: e.target.value,
-            });
-          }}
-          defaultValue={formData.type}
-        >
-          <option value="DEFAULT" selected>
-            Selecione um tipo
-          </option>
-          <option value="S">Vendedor</option>
-          <option value="D">Motorista</option>
-        </select> */}
-      </div>
-      <div className="div-btn-terms">
-        <h4>
-          Ver o <b>contrato</b> do Mercado Livre Ao cadastrar-me, declaro que
+    <>
+      <div className="div-register-form">
+        <ToastContainer />
+        <div className="div-title-card-register">
+          <h2>Crie sua conta já!</h2>
+        </div>
+        <div className="div-register-card">
+          <div className="div-input">
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Nome completo"
+              onChange={(e) => {
+                setFormData({ ...formData, name: e.target.value });
+              }}
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Email"
+              onChange={(e) => {
+                setFormData({ ...formData, email: e.target.value });
+              }}
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="CPF"
+              onChange={(e) => {
+                setFormData({ ...formData, document: e.target.value });
+              }}
+            />
+          </div>
+          <div className="div-input">
+            <input
+              className="input row-input-area-code"
+              type="text"
+              placeholder="DDD"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.phone.areaCode]: e.target.value,
+                });
+              }}
+            />
+            <input
+              className="input row-input-phone"
+              type="text"
+              placeholder="Celular"
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="CEP"
+              onBlur={handleGetCep}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  address: {
+                    ...formData.address,
+                    zipCode: e.target.value,
+                  },
+                });
+              }}
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Logradouro"
+              value={formData.address.street}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.address.street]: e.target.value,
+                });
+              }}
+            />
+          </div>
+          <div className="div-input">
+            <input className="input row-input" type="text" placeholder="Número" />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Bairro"
+              // value={formData.address.district}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.address.district]: e.target.value,
+                });
+              }}
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Cidade"
+              // value={formData.address.city}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.address.city]: e.target.value,
+                });
+              }}
+            />
+          </div>
+          <div className="div-input">
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Estado"
+              // value={[formData.address.state]}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.address.state]: e.target.value,
+                });
+              }}
+            />
+            <input
+              className="input row-input"
+              type="text"
+              placeholder="Complemento"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  [formData.address.complement]: e.target.value,
+                });
+              }}
+            />
+            <select
+              name="type"
+              className="input row-input"
+              value={formData.type}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  type: e.target.value,
+                });
+              }}
+            >
+              <option value="">
+                Tipo
+              </option>
+              <option value="S">Vendedor</option>
+              <option value="D">Motorista</option>
+            </select>
+          </div>
+          <div className="div-btn-terms">
+            <h4>
+              Ver o <b>contrato</b> do Mercado Livre Ao cadastrar-me, declaro que
           sou maior de idade e aceito os <b>Termos e condições</b> e as
           <b> Políticas de privacidade </b>
           do Mercado Livre e do Mercado Pago.
         </h4>
 
-        <ButtonBlue
-          title="Criar conta"
-          loading={spinner}
-          onClick={handleRegister}
-        />
-      </div>
-      <div className="div-go-create-account">
-        <span className="link-go-create-account" onClick={props.clickedLink}>
-          <FiArrowLeft />
+            <ButtonBlue
+              title="Criar conta"
+              loading={spinner}
+              onClick={handleRegister}
+            />
+          </div>
+          <div className="div-go-create-account">
+            <span className="link-go-create-account" onClick={props.clickedLink}>
+              <FiArrowLeft />
           Já tenho conta
         </span>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

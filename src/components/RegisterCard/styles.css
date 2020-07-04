@@ -1,10 +1,20 @@
+.div-title-card-register {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.div-title-card-register {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .div-register-card {
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 100%;
   border-radius: 8px;
   background: #fff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 25px;
 }
 
 .div-register-card {
@@ -20,36 +30,84 @@
   justify-content: center;
   flex-direction: row;
   width: 100%;
+  margin-top: 5px;
 }
 
 .div-input .row-input {
   margin: 0 20px 20px 0;
-  width: 220px;
+  width: 200px;
 }
 
 .div-input .row-input-phone {
   margin: 0 20px 20px 0;
-  width: 120px;
+  width: 110px;
 }
 .div-input .row-input-area-code {
   margin: 0 5px 20px 0;
-  width: 100px;
+  width: 80px;
 }
 
-.div-title-card-register {
-  color: #2d3277;
-  font-size: 18px;
-  font-weight: 700;
+.div-btn-terms {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .div-btn-terms h4 {
-  color: #999797;
-  font-size: 10px;
+  color: #929292;
+  font-size: 8px;
   text-align: justify;
-  width: 300px;
-  margin-bottom: 20px;
+  width: 200px;
+  margin-left: 20px;
 }
 
 .div-btn-terms h4 b {
   color: #0066ff;
+}
+
+.div-go-create-account {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .div-register-form {
+    height: 200vh;
+  }
+  .div-register-card {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    padding: 0px;
+  }
+  .div-input {
+    flex-direction: column;
+  }
+  .div-register-card {
+    justify-content: center;
+  }
+  .div-btn-terms {
+    flex-direction: column;
+  }
+  .div-input .row-input {
+    width: 100%;
+  }
+
+  .div-input .row-input-phone {
+    width: 100%;
+  }
+  .div-input .row-input-area-code {
+    margin: 0 20px 20px 0;
+    width: 100%;
+  }
+  .div-btn-terms h4 {
+    font-size: 12px;
+    width: 300px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 }
