@@ -8,12 +8,8 @@ import {
 import "./styles.css";
 import logo from "../../assets/logo-ml.png";
 import imageUser from "../../assets/profile.jpg";
-<<<<<<< HEAD
-import ButtonBlue from "../../components/ButtonBlue"
-=======
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
->>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
 
 export default function Dashboard() {
   return (
@@ -38,24 +34,6 @@ export default function Dashboard() {
         <div className="div-content-card">
           <div className="div-card-info">
             <div className="div-header-card-info">
-<<<<<<< HEAD
-              <h2>Verificação de Produtos</h2>
-              <h3>Produtos Adicionados</h3>
-            </div>
-            <div className="div-card-selected-items">
-                  <div className="div-selected-item">
-                    <span>Psp 3000 Original Playstation Na Caixa S/ Bateria Otimo Estado</span>
-                    <span>1x</span>
-                  </div>
-            </div>
-            <div className="checkout-area">
-              <div className="label-checkout">
-               <span>Total de produtos: 1</span>
-               <span>Peso total: 3gr</span>
-              </div>
-              <div>
-                <ButtonBlue title="Chamar entregador"></ButtonBlue>
-=======
               <h2>Verificação de Saída</h2>
               <h3>Produtos adicionados:</h3>
             </div>
@@ -74,7 +52,6 @@ export default function Dashboard() {
               </div>
               <div className="div-btn-confirm-driver">
                 <ButtonBlue title="Chamar o entregador" />
->>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
               </div>
             </div>
           </div>
