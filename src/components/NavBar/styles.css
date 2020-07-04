@@ -1,49 +1,48 @@
-.mainNavBar{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    height:60px;
-    background: #FFE600;
+.mainNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #6c6fa0;
 }
-.sideNav{
-    position:absolute;
-    left:-270px;
-    height:100%;
-    width:270px;
-    background:white;
-    border-radius:0 20px 20px 0px;
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    transition: .5s;
+.sideNav {
+  position: absolute;
+  left: -270px;
+  height: 100%;
+  width: 270px;
+  background: white;
+  border-radius: 0 20px 20px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
 }
-.sideNav-open{
-    left:0;
+.sideNav-open {
+  left: 0;
 }
-.menu-item{
-    margin:20px;
-}
-
-.icon-menu{
-    font-size:35px;
+.menu-item {
+  margin: 20px;
 }
 
-.close-button{
-    position: absolute;
-    font-size:30px;
-    right:20px;
-    top:20px;
+.icon-menu {
+  font-size: 35px;
 }
-.profile-area{
-    height:30%;
-    padding:20px;
-}
-.profile-photo{
-    height:150px;
-    width:150px;
-    border-radius: 50%;;
-    background: #c9c9c9;
 
+.close-button {
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+  top: 20px;
+}
+.profile-area {
+  height: 30%;
+  padding: 20px;
+}
+.profile-photo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #c9c9c9;
 }

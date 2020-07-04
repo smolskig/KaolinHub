@@ -5,7 +5,7 @@
 .div-header-yellow {
   width: 100vw;
   height: 40vh;
-  background: #ffe600;
+  background: #6c6fa0;
 }
 
 .logo-ml-dashboard {
@@ -54,10 +54,6 @@
   background: #f2f2f2;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   width: 600px;
-<<<<<<< HEAD
-=======
-  height: 300px;
->>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
   border-radius: 8px;
   padding: 1.2rem;
 }
@@ -66,12 +62,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
   justify-content: space-between;
   padding: 2rem;
-=======
-  justify-content: center;
->>>>>>> 5385b75ab24fc1415e7ad1cae94bc5cde05f3298
 }
 
 .div-card-product {
@@ -156,10 +148,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
 }
-.list-body{
-  height:500px !important;
+.list-body {
+  height: 500px !important;
   max-height: 500px !important;
   overflow: auto;
 }
@@ -206,31 +197,31 @@
   color: #039e00;
   margin-left: 10px;
 }
-.div-card-selected-items{
-  max-height:160px;
+.div-card-selected-items {
+  max-height: 160px;
   overflow: auto;
 }
-.div-selected-item{
-  height:50px;
-  background:white;
-  border-radius:20px;
-  margin:10px;
-  color:#363636;
+.div-selected-item {
+  height: 50px;
+  background: white;
+  border-radius: 20px;
+  margin: 10px;
+  color: #363636;
   font-weight: 500;
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.checkout-area{
-  display:flex;
-  width:100%;
+.checkout-area {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
-  padding:10px 20px;
+  padding: 10px 20px;
 }
-.label-checkout{
-  display:flex;
+.label-checkout {
+  display: flex;
   flex-direction: column;
   font-weight: 500;
-  color:#363636;
+  color: #363636;
 }
