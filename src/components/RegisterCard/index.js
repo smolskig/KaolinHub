@@ -13,12 +13,14 @@ export default function RegisterCard(props) {
   const notify = (message) => toast.error(message);
   const history = useHistory();
   const [spinner, setSpinner] = useState(false);
-  const [addressCep, setAddressCep] = useState({
-    street: "",
-    district: "",
-    city: "",
-    state: ""
-  });
+
+  // const [addressCep, setAddressCep] = useState({
+  //   street: "",
+  //   district: "",
+  //   city: "",
+  //   state: ""
+  // });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,6 +55,7 @@ export default function RegisterCard(props) {
   const handleRegister = () => RequestRegister(formData);
 
   function RequestRegister(data) {
+    console.log('finalData',formData)
     setSpinner(true);
     api
       .post("/api/register", data)
@@ -66,8 +69,6 @@ export default function RegisterCard(props) {
         } else {
           return history.push("/dashboardDriver");
         }
-
-        setSpinner(false);
       })
       .catch((err) => {
         notify(err.response.data.message);
@@ -79,24 +80,19 @@ export default function RegisterCard(props) {
     if (formData.address.zipCode.length === 8) {
       await cep(formData.address.zipCode)
         .then((response) => {
-          setAddressCep({
-            ...addressCep,
+          let tempData = JSON.parse(JSON.stringify(formData))
+          tempData.address = {
             street: response.street,
             district: response.neighborhood,
             city: response.city,
-            state: response.state
-          });
-          handleRegisterForm(addressCep);
+            state: response.state,
+            zipCode:formData.address.zipCode
+          }
+          setFormData(tempData)
         }).catch((err) => {
           notify(err.errors[1].message);
         });
     }
-  }
-
-  function handleRegisterForm(data) {
-    let tempData = formData;
-    formData.address = data;
-    console.log(tempData);
   }
 
   return (
@@ -110,6 +106,7 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="Nome completo"
+          value={formData.name}
           onChange={(e) => {
             setFormData({ ...formData, name: e.target.value });
           }}
@@ -118,6 +115,7 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="Email"
+          value={formData.email}
           onChange={(e) => {
             setFormData({ ...formData, email: e.target.value });
           }}
@@ -126,20 +124,26 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="CPF"
+          value={formData.document}
           onChange={(e) => {
             setFormData({ ...formData, document: e.target.value });
           }}
         />
       </div>
       <div className="div-input">
+        
         <input
           className="input row-input-area-code"
           type="text"
           placeholder="DDD"
+          value={formData.phone.ddd}
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.phone.areaCode]: e.target.value,
+              phone: {
+                ...formData.phone,
+                areaCode: e.target.value,
+              },
             });
           }}
         />
@@ -147,6 +151,16 @@ export default function RegisterCard(props) {
           className="input row-input-phone"
           type="text"
           placeholder="Celular"
+          value={formData.phone.number}
+          onChange={(e) => {
+            setFormData({
+              ...formData,
+              phone: {
+                ...formData.phone,
+                number: e.target.value,
+              },
+            });
+          }}
         />
         <input
           className="input row-input"
@@ -171,7 +185,10 @@ export default function RegisterCard(props) {
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.address.street]: e.target.value,
+              address: {
+                ...formData.address,
+                street: e.target.value,
+              },
             });
           }}
         />
@@ -182,11 +199,14 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="Bairro"
-          // value={formData.address.district}
+          value={formData.address.district}
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.address.district]: e.target.value,
+              address: {
+                ...formData.address,
+                district: e.target.value,
+              },
             });
           }}
         />
@@ -194,11 +214,14 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="Cidade"
-          // value={formData.address.city}
+          value={formData.address.city}
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.address.city]: e.target.value,
+              address: {
+                ...formData.address,
+                city: e.target.value,
+              },
             });
           }}
         />
@@ -208,11 +231,14 @@ export default function RegisterCard(props) {
           className="input row-input"
           type="text"
           placeholder="Estado"
-          // value={[formData.address.state]}
+          value = {formData.address.state}
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.address.state]: e.target.value,
+              address: {
+                ...formData.address,
+                state: e.target.value,
+              },
             });
           }}
         />
@@ -223,27 +249,30 @@ export default function RegisterCard(props) {
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.address.complement]: e.target.value,
+              address: {
+                ...formData.address,
+                complement: e.target.value,
+              },
             });
           }}
         />
-        {/* <select
+        <select
           name="type"
           className="input row-input"
+          value={formData.type}
           onChange={(e) => {
             setFormData({
               ...formData,
-              [formData.type]: e.target.value,
+              type: e.target.value,
             });
           }}
-          defaultValue={formData.type}
         >
-          <option value="DEFAULT" selected>
+          <option value="" >
             Selecione um tipo
           </option>
           <option value="S">Vendedor</option>
           <option value="D">Motorista</option>
-        </select> */}
+        </select>
       </div>
       <div className="div-btn-terms">
         <h4>

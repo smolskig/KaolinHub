@@ -12,13 +12,6 @@ import logo from "../../assets/logo-ml.png";
 import imageUser from "../../assets/profile.jpg";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 11228ed861464bd03631386ec46fc3d09da7de7a
 
 export default function Dashboard() {
   const history = useHistory()
@@ -51,7 +44,6 @@ export default function Dashboard() {
         <div className="div-content-card">
           <div className="div-card-info">
             <div className="div-header-card-info">
-<<<<<<< HEAD
               <h2>Verificação de Produtos</h2>
               <h3>Produtos Adicionados</h3>
             </div>
@@ -70,26 +62,6 @@ export default function Dashboard() {
               </div>
               <div>
                 <ButtonBlue title="Chamar entregador"></ButtonBlue>
-=======
-              <h2>Verificação de Saída</h2>
-              <h3>Produtos adicionados:</h3>
-            </div>
-            <div className="div-card-product">
-              <div className="card-product">
-                <h4>
-                  Psp 3000 Original Playstation Na Caixa S/ Bateria Otimo Estado
-                </h4>
-                <h4>1x</h4>
-              </div>
-            </div>
-            <div className="div-card-info-success">
-              <div className="info-product">
-                <h4>Total de produtos: 3</h4>
-                <h4>Peso total: 300gr </h4>
-              </div>
-              <div className="div-btn-confirm-driver">
-                <ButtonBlue title="Chamar o entregador" />
->>>>>>> 11228ed861464bd03631386ec46fc3d09da7de7a
               </div>
             </div>
           </div>
