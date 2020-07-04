@@ -54,6 +54,10 @@
   background: #f2f2f2;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   width: 600px;
+<<<<<<< HEAD
+=======
+  height: 300px;
+>>>>>>> 11228ed861464bd03631386ec46fc3d09da7de7a
   border-radius: 8px;
   padding: 1.2rem;
 }
@@ -62,8 +66,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   justify-content: space-between;
   padding: 2rem;
+=======
+  justify-content: center;
+>>>>>>> 11228ed861464bd03631386ec46fc3d09da7de7a
 }
 
 .div-card-product {
