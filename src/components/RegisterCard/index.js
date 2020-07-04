@@ -63,7 +63,6 @@ export default function RegisterCard(props) {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("userData", JSON.stringify(res.data.data.user));
         const userData = JSON.parse(localStorage.getItem("userData"));
-
         if (userData.type === "S") {
           return history.push("/dashboard");
         } else {
