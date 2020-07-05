@@ -23,9 +23,9 @@ export default function LoginCard(props) {
     setSpinner(true);
     api
       .post("/login", data)
-      .then((res) => {
-        localStorage.setItem("token", res.data.data.token);
-        localStorage.setItem("userData", JSON.stringify(res.data.data.user));
+      .then(async(res) => {
+        await localStorage.setItem("token", res.data.data.token);
+        await localStorage.setItem("userData", JSON.stringify(res.data.data.user));
 
         const userData = JSON.parse(localStorage.getItem("userData"));
 

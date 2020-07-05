@@ -52,8 +52,12 @@
 
 .div-card-info {
   background: #f2f2f2;
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
+  width:95%;
+  max-width:700px;
   border-radius: 8px;
   padding: 1.2rem;
 }
@@ -64,6 +68,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  text-align:center;
 }
 
 .div-card-product {
@@ -114,7 +119,8 @@
 }
 
 .div-input-search .input {
-  width: 600px;
+  width:80%;
+  max-width: 600px;
 }
 
 .icon-search {
@@ -148,6 +154,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  width:100%;
+  max-width:800px;
+  max-height:300px;
 }
 .list-body {
   height: 500px !important;
@@ -198,14 +208,19 @@
   margin-left: 10px;
 }
 .div-card-selected-items {
+  display:flex;
+  justify-content: center;
+  width:100%;
   max-height: 160px;
   overflow: auto;
 }
 .div-selected-item {
   height: 50px;
+  width:80%;
   background: white;
   border-radius: 20px;
   margin: 10px;
+  padding:15px;
   color: #363636;
   font-weight: 500;
   display: flex;
@@ -215,13 +230,49 @@
 
 .checkout-area {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 20px;
 }
 .label-checkout {
   display: flex;
   flex-direction: column;
   font-weight: 500;
+  width:100%;
+  margin:10px;
   color: #363636;
+  text-align: center;
+}
+
+.list-item{
+  width:80%;
+  background:#f2f2f2;
+  margin:10px;
+  padding:15px;
+  border-radius:10px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media(max-width:900px){
+  .list-item{
+    width:100%;
+    font-size:80%;
+    border-radius: 0;
+  }
+  .div-card-selected-items{
+    font-size:80%;
+  }
+  .div-header-card-info{
+    font-size:5vw;
+  }
+  .div-selected-item{
+    width:100%;
+  }
+  .div-card-info{
+    padding:0;
+  }
 }

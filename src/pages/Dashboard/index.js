@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useHistory } from "react-router-dom"
 
 import {
-  FiChevronDown,
-  FiChevronUp,
   FiCheckCircle,
   FiSearch,
 } from "react-icons/fi";
@@ -12,16 +10,28 @@ import logo from "../../assets/logo-ml.png";
 import imageUser from "../../assets/profile.jpg";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
+import api from '../../services/api'
+import Loader from "react-loader-spinner";
 
 export default function Dashboard() {
+  const [sales, setSales] = useState([])
+  const [loading, setLoading] = useState(false)
   const history = useHistory()
+  
   useEffect(() => {
     let userData = JSON.parse(localStorage.getItem('userData'))
-    console.log('entrou no if n era pra ter entrado', userData)
     if (userData.mlLogged === false) {
       history.push('/verify-token')
+    }else{
+      setLoading(true)
+      api.get('ml/sales',{headers:{ "Authorization" : `Bearer ${localStorage.getItem('token')}` }})
+        .then(res => {
+          setSales(res.data.data)
+          setLoading(false)
+        }) 
     }
-  })
+  },[history])
+  
   return (
     <>
       <div className="dashboard-main">
@@ -79,105 +89,33 @@ export default function Dashboard() {
         <div className="div-list-products">
           <div className="div-card-list">
             <h3>Lista de Produtos:</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Produto</th>
-                  <th>
-                    Titulo <FiChevronUp color="#F17400" />
-                  </th>
-                  <th>
-                    Preço <FiChevronDown />
-                  </th>
-                  <th>
-                    Quantidade <FiChevronDown />
-                  </th>
-                  <th>Situação</th>
-                </tr>
-              </thead>
-              <tbody className="list-body">
-                <tr>
-                  <td>
-                    <img
-                      className="image-product"
-                      src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="ImageProduct"
-                    />
-                  </td>
-                  <td className="table-title">LG K50S Dual SIM 32 GB</td>
-                  <td>R$ 1.299</td>
-                  <td>1</td>
-                  <td>
-                    Vendido
-                    <FiCheckCircle className="check-success" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      className="image-product"
-                      src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="ImageProduct"
-                    />
-                  </td>
-                  <td className="table-title">LG K50S Dual SIM 32 GB</td>
-                  <td>R$ 1.299</td>
-                  <td>1</td>
-                  <td>
-                    Vendido
-                    <FiCheckCircle className="check-success" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      className="image-product"
-                      src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="ImageProduct"
-                    />
-                  </td>
-                  <td className="table-title">LG K50S Dual SIM 32 GB</td>
-                  <td>R$ 1.299</td>
-                  <td>1</td>
-                  <td>
-                    Vendido
-                    <FiCheckCircle className="check-success" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      className="image-product"
-                      src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="ImageProduct"
-                    />
-                  </td>
-                  <td className="table-title">LG K50S Dual SIM 32 GB</td>
-                  <td>R$ 1.299</td>
-                  <td>1</td>
-                  <td>
-                    Vendido
-                    <FiCheckCircle className="check-success" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      className="image-product"
-                      src="https://http2.mlstatic.com/D_NQ_NP_2X_854957-MLA41827614180_052020-F.webp%202x"
-                      alt="ImageProduct"
-                    />
-                  </td>
-                  <td className="table-title">LG K50S Dual SIM 32 GB</td>
-                  <td>R$ 1.299</td>
-                  <td>1</td>
-                  <td>
-                    Vendido
-                    <FiCheckCircle className="check-success" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+                {
+                  loading 
+                  ?
+                  <Loader type="Oval" class="spinner-center" color="#00BFFF" height={70} width={70} />
+                  :
+                  sales.map((sale,key)=>{
+                    return (
+                      <div className="list-item" key={sale.mlProductId} >
+                        <div>
+                          <img
+                            className="image-product"
+                            src={sale.photo}
+                            alt="ImageProduct"
+                          />
+                        </div>
+                        <div className="table-title">{sale.title}</div>
+                        <div>{sale.price}</div>
+                        <div>{sale.quantity}</div>
+                        <div>
+                          {sale.status}
+                          <FiCheckCircle className="check-success" />
+                        </div>
+                      </div>
+                    )
+                  })
+                }
             <StatusDelivery />
           </div>
         </div>
