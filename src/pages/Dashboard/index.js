@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import "./styles.css";
 import logo from "../../assets/logo-branco.svg";
-import imageUser from "../../assets/profile.jpg";
+import imageUser from "../../assets/user.png";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
 

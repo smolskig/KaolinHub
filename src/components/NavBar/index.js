@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiX, FiPower } from "react-icons/fi";
 import "./styles.css";
-import imageUser from "../../assets/profile.jpg";
+import imageUser from "../../assets/user.png";
 import logo from '../../assets/logo.svg';
 
 export default function DashboardDriver() {
