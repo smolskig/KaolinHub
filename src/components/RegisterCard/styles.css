@@ -1,6 +1,7 @@
 .div-title-card-register {
   text-align: center;
   margin-bottom: 5px;
+
 }
 .div-title-card-register {
   color: #fff;
@@ -9,7 +10,7 @@
 }
 
 .div-register-card {
-  width: 700px;
+  width: 750px;
   height: 100%;
   border-radius: 8px;
   background: #fff;
@@ -106,17 +107,13 @@
 .div-btn-terms h4 b {
   color: #0066ff;
 }
-
-.div-go-create-account {
+.div-go-create-account-register {
   margin-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
   body {
     overflow: auto;
-  }
-  .div-register-form {
-    height: 200vh;
   }
   .div-register-card {
     width: 100%;
@@ -151,3 +148,5 @@
     margin-bottom: 20px;
   }
 }
+
+

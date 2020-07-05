@@ -4,10 +4,11 @@ import { useHistory } from "react-router-dom"
 import {
   FiCheckCircle,
   FiSearch,
+  FiPower,
 } from "react-icons/fi";
 import "./styles.css";
-import logo from "../../assets/logo-ml.png";
-import imageUser from "../../assets/profile.jpg";
+import logo from "../../assets/logo-branco.svg";
+import imageUser from "../../assets/user.png";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
 import api from '../../services/api'
@@ -48,6 +49,7 @@ export default function Dashboard() {
               <div className="div-photo-user">
                 <img className="image-user" src={imageUser} alt="ImageUser" />
               </div>
+              <FiPower className="icon-logout-dashboard" />
             </div>
           </div>
         </div>

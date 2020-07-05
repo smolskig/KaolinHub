@@ -88,7 +88,7 @@ export default function LoginCard(props) {
           esqueci minha senha
         </a>
       </div>
-      <div>
+      <div className="button-container">
         <ButtonBlue
           title="entrar"
           loading={spinner}

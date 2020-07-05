@@ -5,7 +5,9 @@
   align-items: center;
   width: 100%;
   height: 60px;
-  background: #6c6fa0;
+  background: #3D46CF;
+  z-index: 999999;
+  border-radius: 0px 0px 20px 20px;
 }
 .sideNav {
   position: absolute;
@@ -13,11 +15,12 @@
   height: 100%;
   width: 270px;
   background: white;
-  border-radius: 0 20px 20px 0px;
+  border-radius: 0 8px 8px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
   transition: 0.5s;
+  z-index: 999999;
 }
 .sideNav-open {
   left: 0;
@@ -25,14 +28,19 @@
 .menu-item {
   margin: 20px;
 }
+.balance {
+  text-align: center;
+  color: #f2f2f2;
+}
 
-.logo-ml-navbar {
-  width: 150px;
+.balance h2 {
+  color: #39cf39;
 }
 
 .icon-menu {
   font-size: 35px;
   cursor: pointer;
+  color: #f2f2f2;
 }
 
 .close-button {
@@ -41,6 +49,13 @@
   right: 20px;
   top: 20px;
   cursor: pointer;
+}
+
+.logo-navbar{
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .div-photo-user {
@@ -62,17 +77,98 @@
   height: 34px;
   border-radius: 100%;
 }
+
 .profile-area {
   height: 30%;
-  padding: 20px;
+  padding: 30px;
+  margin-top: 50px;
+  text-align: center;
 }
+
 .profile-photo {
-  height: 150px;
-  width: 150px;
+  height: 90px;
+  width: 90px;
 }
 
 .image-profile {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+}
+
+.content-area-ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #333;
+}
+
+.content-area-ul li{
+  cursor: pointer;
+  transition: filter 0.3s ease-in;
+}
+
+.content-area-ul li:hover{
+  filter: brightness(70%);
+}
+
+.content-area-ul li{
+  margin-bottom: 40px;
+}
+
+
+.div-logout{
+  position: absolute;
+  bottom: 0;
+  color: #C30000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.div-logout-ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.div-logout li{
+  cursor: pointer;
+  transition: filter 0.3s ease-in;
+}
+.div-logout li:hover{
+  filter: brightness(80%);
+}
+
+.icon-logout{
+  margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .content-area-ul{
+    margin-top: 20px;
+  }
+  .content-area-ul li{
+    margin-bottom: 15px;
+  }
+  
+  .content-area-ul li {
+    margin-top: 20px;
+    font-size: 14px;
+
+  }
+  .balance h2 {
+    font-size: 18px;
+  }
+  .balance h4 {
+    font-size: 16px;
+  }
 }

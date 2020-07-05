@@ -5,15 +5,20 @@
 }
 
 .div-background-yellow {
-  background: #6c6fa0;
-  width: 60vw;
+  background: #fff;
+  width: 50%;
   height: 100%;
   border-radius: 0 8px 8px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  
+}
+
+.div-logo-title{
+  text-align: center;
+  font-size: 24px;
 }
 
 .div-image-svg {
@@ -30,7 +35,7 @@
 
 .logo-ml {
   padding-bottom: 1rem;
-  height: 60px;
+  height: 100px;
   margin-top: 20px;
 }
 
@@ -38,12 +43,14 @@
   body {
     overflow: auto;
   }
+  .div-content-login-register {
+    height: 100%;
+  }
   .div-image-svg {
     display: none;
   }
   .div-background-yellow {
     background: #fff;
     width: 100%;
-    height: 100vh;
   }
 }

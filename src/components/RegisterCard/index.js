@@ -424,18 +424,17 @@ export default function RegisterCard(props) {
           <b> Políticas de privacidade </b>
           do Mercado Livre e do Mercado Pago.
         </h4>
-
           <ButtonBlue
             title="Criar conta"
             loading={spinner}
             onClick={handleRegister}
           />
         </div>
-        <div className="div-go-create-account">
+        <div className="div-go-create-account-register ">
           <span className="link-go-create-account" onClick={props.clickedLink}>
             <FiArrowLeft />
-          Já tenho conta
-        </span>
+            Já tenho conta
+          </span>
         </div>
       </div>
     </>
