@@ -17,8 +17,9 @@ export default function DashboardDriver() {
             }}
           ></FiMenu>
         </div>
-        <div className="logo menu-item">
-          <img src={logo} alt="Logo" className="logo-ml-navbar" />
+        <div className="balance menu-item">
+          <h4>Seu saldo</h4>
+          <h2>R$ 2.321,02</h2>
         </div>
         <div className="profile menu-item">
           <div className="div-photo-user">
@@ -43,7 +44,9 @@ export default function DashboardDriver() {
         </div>
         <div className="content-area">
           <ul>
-            <li>Gabriel</li>
+            <li>
+              BLABLA
+            </li>
           </ul>
         </div>
       </div>
