@@ -1,6 +1,6 @@
 .div-register-card {
-  width: 600px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
   border-radius: 8px;
   background: #fff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
@@ -24,15 +24,15 @@
 
 .div-input .row-input {
   margin: 0 20px 20px 0;
-  width: 250px;
+  width: 220px;
 }
 
 .div-input .row-input-phone {
   margin: 0 20px 20px 0;
-  width: 130px;
+  width: 120px;
 }
 .div-input .row-input-area-code {
-  margin: 0 20px 20px 0;
+  margin: 0 5px 20px 0;
   width: 100px;
 }
 
