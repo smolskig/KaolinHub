@@ -1,3 +1,7 @@
+body{
+  overflow: auto;
+}
+
 .dashboard-main {
   overflow-x: hidden;
 }
@@ -5,11 +9,11 @@
 .div-header-yellow {
   width: 100vw;
   height: 40vh;
-  background: #6c6fa0;
+  background: #3D46CF;
 }
 
 .logo-ml-dashboard {
-  padding: 2rem;
+  margin: 3rem;
   cursor: pointer;
 }
 
@@ -20,7 +24,16 @@
 }
 
 .div-dashboard-user {
-  padding: 2rem;
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+.icon-logout-dashboard{
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
 }
 
 .div-photo-user {
@@ -224,4 +237,11 @@
   flex-direction: column;
   font-weight: 500;
   color: #363636;
+}
+
+@media only screen and (max-width: 768px){
+  .div-header-nav {
+   width: 100%;
+  }
+  
 }

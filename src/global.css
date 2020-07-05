@@ -15,7 +15,7 @@ body,
 }
 
 .input {
-  width: 400px;
+  width: 300px;
   height: 60px;
   border-radius: 8px;
   border: none;
@@ -29,6 +29,7 @@ body,
   width: 160px;
 }
 
+.div-go-create-account-register .link-go-create-account,
 .div-go-create-account .link-go-create-account {
   display: flex;
   align-items: center;
@@ -40,6 +41,15 @@ body,
   font-weight: 600;
 }
 
+.div-go-create-account-register .link-go-create-account:hover,
 .div-go-create-account .link-go-create-account:hover {
   filter: brightness(80%);
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
 }

@@ -1,48 +1,51 @@
-.div-root-panel{
-    width:100%;
-    height:100%;
-    background: #efeeee;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.div-root-panel {
+  width: 100%;
+  height: 100%;
+  background: #efeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.buttonCard{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height:109px;
-    width:217px;
-    background: #f9f9f9;
-    border-radius:20px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    margin:20px;
-    z-index:1;
+.buttonCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 109px;
+  width: 300px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  z-index: 1;
+  padding: 20px;
 }
 
-.button{
-    width:166px;
-    height:68px;
-    background: #2D3277;
-    border-radius: 10px;
-    color:white;
-    font-size:22px;
-    font-weight: 500;
-    border:none;
+.button {
+  width: 166px;
+  height: 68px;
+  background: #2d3277;
+  border-radius: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  filter: brightness(80%);
+}
 
-}
-.button:focus{
-    outline:none;
-}
-.button:hover{
-    filter: brightness(75%);
+.map-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
-.map-img{
-    position:absolute;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-}
+

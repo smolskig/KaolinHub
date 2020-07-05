@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom"
+
 import {
   FiChevronDown,
   FiChevronUp,
   FiCheckCircle,
   FiSearch,
+  FiPower,
 } from "react-icons/fi";
 import "./styles.css";
-import logo from "../../assets/logo-ml.png";
+import logo from "../../assets/logo-branco.svg";
 import imageUser from "../../assets/profile.jpg";
 import ButtonBlue from "../../components/ButtonBlue";
 import StatusDelivery from "../../components/StatusDelivery";
 
 export default function Dashboard() {
+  const history = useHistory()
+  useEffect(() => {
+    let userData = JSON.parse(localStorage.getItem('userData'))
+    console.log('entrou no if n era pra ter entrado', userData)
+    if (userData.mlLogged === false) {
+      history.push('/verify-token')
+    }
+  })
   return (
     <>
       <div className="dashboard-main">
@@ -28,6 +39,7 @@ export default function Dashboard() {
               <div className="div-photo-user">
                 <img className="image-user" src={imageUser} alt="ImageUser" />
               </div>
+              <FiPower className="icon-logout-dashboard" />
             </div>
           </div>
         </div>

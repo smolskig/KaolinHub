@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import imageSvg from "../../assets/login-svg.svg";
-import logo from "../../assets/logo-ml.png";
+import logo from "../../assets/logo.svg";
 import LoginCard from "../../components/LoginCard";
 import RegisterCard from "../../components/RegisterCard";
+
+
 import "./styles.css";
 
 export default function Login() {
@@ -11,6 +13,7 @@ export default function Login() {
   function handleCardForm() {
     if (cardMode) {
       return (
+
         <RegisterCard
           clickedLink={() => {
             setCardMode(false);
@@ -32,9 +35,11 @@ export default function Login() {
     <>
       <div className="div-content-login-register">
         <div className="div-background-yellow">
-          <div>
+          <div className="div-logo-title">
             <img className="logo-ml" src={logo} alt="LogoMercadoEntrega" />
+            <h2>KaolinHub</h2> 
           </div>
+
           <div>{handleCardForm()}</div>
         </div>
         <div className="div-image-svg">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiX } from "react-icons/fi";
+import { FiX, FiBell } from "react-icons/fi";
 import "./styles.css";
 
 export default function StatusDelivery() {
@@ -14,7 +14,7 @@ export default function StatusDelivery() {
         }}
       >
         <div className="status-delivery">
-          <h2>Nenhuma entrega em andamento</h2>
+          <h2><FiBell size={24} color="#fff" /></h2>
         </div>
       </div>
       <div className={customClassStatus}>

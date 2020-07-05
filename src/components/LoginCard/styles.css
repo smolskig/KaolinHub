@@ -1,6 +1,6 @@
 .div-login-card {
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
   border-radius: 8px;
   background: #fff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
@@ -39,4 +39,13 @@
 
 .link-forgot-password:hover {
   filter: brightness(80%);
+}
+
+@media only screen and (max-width: 768px) {
+  .div-login-card {
+    box-shadow: none;
+  }
+  .div-login-card {
+    width: 100%;
+  }
 }
