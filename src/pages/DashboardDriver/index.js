@@ -87,7 +87,7 @@ export default function DashboardDriver() {
       <ModalComponent open={openModal}>
       <FiX onClick={()=>setOpenModal(false)} className="icon-close-modal" />
       <div className="accept-info">
-        <h3>Entrega de: {sellerData.sellerName}</h3>
+        <h4>Entrega de: {sellerData.sellerName}</h4>
         <span className="label">Endereço de Coleta:</span>
           <span className="address">{sellerData.startAddress}</span>
         <span className="label">Endereço de Entrega:</span>
@@ -102,9 +102,11 @@ export default function DashboardDriver() {
 
       <div className="div-root-panel">
         <NavBar />
+        {!isOnTravel ?
         <div className="buttonCard">
-          <ButtonBlue title="Pesquisar" onClick={catchDrive} loading={loading}/>
-        </div>
+          <ButtonBlue title="Buscar Entregas" onClick={catchDrive} loading={loading}/>
+        </div>: false
+        }
         <div className="map-container">
           {isOnTravel ?
           <div className="card-seller-info">

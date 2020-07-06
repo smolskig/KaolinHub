@@ -11,6 +11,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .div-verify-token-img {
@@ -29,6 +30,11 @@ body{
   align-items: center;
   color: #111;
 }
+
+.div-verify-token-img h2{
+  font-family: Post No Bills Jaffna Bold;
+}
+
 .div-verify-token-title-btn h2,
 .div-verify-token-title-btn h4 {
   margin-bottom: 50px;

@@ -267,7 +267,7 @@ body{
   width:10px;
 }
 .button-area{
-  width:35%;
+  width:70%;
 }
 .list-item{
   width:80%;
@@ -323,5 +323,8 @@ body{
   }
   .div-card-info{
     padding:0;
+  }
+  .div-content-card{
+    margin-top: -100px;
   }
 }
