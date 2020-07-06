@@ -40,7 +40,7 @@ export default function Login() {
             <h2>KaolinHub</h2> 
           </div>
 
-          <div>{handleCardForm()}</div>
+          {handleCardForm()}
         </div>
         <div className="div-image-svg">
           <img src={imageSvg} alt="LoginSvg" />

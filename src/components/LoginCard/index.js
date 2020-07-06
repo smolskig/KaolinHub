@@ -23,9 +23,9 @@ export default function LoginCard(props) {
     setSpinner(true);
     api
       .post("/login", data)
-      .then((res) => {
-        localStorage.setItem("token", res.data.data.token);
-        localStorage.setItem("userData", JSON.stringify(res.data.data.user));
+      .then(async(res) => {
+        await localStorage.setItem("token", res.data.data.token);
+        await localStorage.setItem("userData", JSON.stringify(res.data.data.user));
 
         const userData = JSON.parse(localStorage.getItem("userData"));
 
@@ -88,7 +88,7 @@ export default function LoginCard(props) {
           esqueci minha senha
         </a>
       </div>
-      <div>
+      <div className="button-container">
         <ButtonBlue
           title="entrar"
           loading={spinner}
