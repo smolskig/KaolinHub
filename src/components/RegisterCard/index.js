@@ -401,7 +401,7 @@ export default function RegisterCard(props) {
         <div className="div-input">
           <input
             className="input row-input"
-            type="text"
+            type="password"
             placeholder="Senha"
             value={formData.password}
             onChange={(e) => {
@@ -410,7 +410,7 @@ export default function RegisterCard(props) {
           />
           <input
             className="input row-input"
-            type="text"
+            type="password"
             placeholder="Confirmar senha"
             value={formData.confirmPassword}
             onChange={(e) => {
