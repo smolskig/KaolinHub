@@ -87,7 +87,8 @@ export default function RegisterCard(props) {
             district: response.neighborhood,
             city: response.city,
             state: response.state,
-            zipCode: formData.address.zipCode
+            zipCode: formData.address.zipCode,
+            complement:''
           }
           setFormData(tempData)
         }).catch((err) => {
@@ -102,9 +103,8 @@ export default function RegisterCard(props) {
 
   return (
     <>
-      {
-        modal ?
-          <Modal>
+      { 
+          <Modal open={modal}>
             <div className="div-title-model">
               <FiX onClick={handleCloseModal} className="icon-close-modal" />
               <h2>Preencha os dados do seu veículo</h2>
@@ -200,13 +200,14 @@ export default function RegisterCard(props) {
                 }}
               />
             </div>
-            <ButtonBlue
-              title="Criar conta"
-              loading={spinner}
-              onClick={() => RequestRegister(formData)}
-            />
+            <div className="button-open-modal">
+              <ButtonBlue
+                title="Criar conta"
+                loading={spinner}
+                onClick={() => RequestRegister(formData)}
+              />
+            </div>
           </Modal>
-          : false
       }
       <div className="div-register-card">
         <ToastContainer />

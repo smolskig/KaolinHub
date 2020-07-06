@@ -3,10 +3,12 @@ import './styles.css';
 
 export default function Modal(props) {
   return (
-    <div className="div-modal-content">
-      <div className="div-modal">
-        {props.children}
+    props.open ?
+      <div className="div-modal-content">
+        <div className="div-modal">
+          {props.children}
+        </div>
       </div>
-    </div>
+    : false
   );
 }

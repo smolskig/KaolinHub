@@ -8,6 +8,7 @@
   background: rgba(0, 0, 0, 0.568);
   top: 0;
   left: 0;
+  z-index:5;
 }
 .div-modal {
   display: flex;
@@ -17,7 +18,8 @@
 }
 
 .div-modal {
-  width: 500px;
+  width:95%;
+  max-width: 500px;
   height: 400px;
   background: #fff;
   border-radius: 8px;
