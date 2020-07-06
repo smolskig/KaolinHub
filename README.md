@@ -17,3 +17,15 @@ O KaolinHub foi criado para suprir a necessidade de acelerar as entregas durante
 
 
 Este projeto foi realizado durante o Hackaton MegaHack 3.0 realizado pela Shawee.
+
+## Desenvolvido por:
+- https://github.com/smolskig/
+
+- https://github.com/leonardodsf
+
+- https://github.com/rogerhaack/
+
+- https://www.linkedin.com/in/fabr%C3%ADcio-pereira-de-oliveira-b41b39b6/
+
+- https://www.linkedin.com/in/rafael-correia-4562b3177/
+
